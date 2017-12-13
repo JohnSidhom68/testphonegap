@@ -13,6 +13,11 @@ body {
     position: relative;
 }
 
+li>a.tappable-active {
+    color: #fff;
+    background-color: #4286f5;
+}
+
 .header {
     background: #666;
     -webkit-background-size: 1px 44px;
