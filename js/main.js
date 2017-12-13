@@ -10,6 +10,7 @@ var app = {
             $('body').on('touchend', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
             });
+            $(window).on('hashchange', $.proxy(this.route, this));
         } else {
             // ... if not: register mouse events instead
             $('body').on('mousedown', 'a', function(event) {
@@ -18,7 +19,7 @@ var app = {
             $('body').on('mouseup', 'a', function(event) {
                 $(event.target).removeClass('tappable-active');
             });
-            $(window).on('hashchange', $.proxy(this.route, this));
+            
         }
     },
     route: function() {
